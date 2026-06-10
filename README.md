@@ -1,20 +1,16 @@
-# Korean Conversational AI (사주도사 - Saju Dosa)
+# React + Vite
 
-Korean Conversational AI 프로젝트의 두 가지 주요 디자인 화면을 담고 있는 리포지토리입니다.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## 📱 프로젝트 화면 소개
-1. **Consult a Master (상담하기)**
-   - 마스터 찾기, 카테고리 태그 및 상세 정보 확인 화면
-2. **Your Destiny Revealed (사주 분석 결과)**
-   - 오행 분석 밸런스 차트, 하모니 스코어 및 결과 상세 리포트 화면
+Currently, two official plugins are available:
 
-## 🛠️ 로컬 서버 구동 방법
-로컬 개발 서버를 실행해 브라우저 상에서 인터랙션을 직접 확인할 수 있습니다.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-```bash
-# 1. 의존성 없이 로컬 정적 서버 실행
-npx http-server -p 8080
-```
+## React Compiler
 
-- **Consult a Master**: http://localhost:8080/consult_a_master/code.html
-- **Your Destiny Revealed**: http://localhost:8080/your_destiny_revealed/code.html
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
