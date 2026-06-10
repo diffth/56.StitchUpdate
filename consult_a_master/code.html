@@ -1,21 +1,468 @@
 <!DOCTYPE html>
-<html class="dark" lang="en">
-<head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>Saju Dosa | Consultation &amp; Community</title>
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Saju Dosa | Consultation &amp; Community</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "surface-container-high": "#282b27",
+                "on-secondary": "#28332f",
+                "secondary": "#bec9c4",
+                "error-container": "#93000a",
+                "midnight-base": "#0D1311",
+                "surface-container-low": "#1a1c19",
+                "outline": "#8c9389",
+                "on-error-container": "#ffdad6",
+                "surface-dim": "#121411",
+                "surface": "#121411",
+                "error": "#ffb4ab",
+                "on-error": "#690005",
+                "background": "#121411",
+                "on-surface-variant": "#c2c8be",
+                "primary-fixed-dim": "#a7d1a6",
+                "surface-container-highest": "#333532",
+                "primary": "#a7d1a6",
+                "on-secondary-fixed": "#141e1b",
+                "inverse-on-surface": "#2f312e",
+                "forest-accent": "#2D4436",
+                "tertiary-container": "#677451",
+                "on-tertiary": "#293417",
+                "on-tertiary-fixed-variant": "#3f4b2c",
+                "on-primary": "#133819",
+                "on-tertiary-fixed": "#141f05",
+                "secondary-container": "#3e4945",
+                "secondary-fixed": "#dae5e0",
+                "inverse-surface": "#e2e3de",
+                "secondary-fixed-dim": "#bec9c4",
+                "tertiary-fixed": "#dae8be",
+                "surface-bright": "#383a36",
+                "on-surface": "#e2e3de",
+                "surface-container-lowest": "#0d0f0c",
+                "primary-fixed": "#c3eec0",
+                "primary-container": "#527853",
+                "sage-highlight": "#B7C0A8",
+                "on-secondary-fixed-variant": "#3e4945",
+                "on-primary-fixed-variant": "#2a4f2e",
+                "surface-tint": "#a7d1a6",
+                "on-background": "#e2e3de",
+                "outline-variant": "#424941",
+                "on-primary-fixed": "#002107",
+                "on-primary-container": "#d3ffd0",
+                "on-tertiary-container": "#ebface",
+                "surface-variant": "#333532",
+                "surface-container": "#1e201d",
+                "inverse-primary": "#426743",
+                "tertiary": "#becca3",
+                "tertiary-fixed-dim": "#becca3",
+                "on-secondary-container": "#acb8b3"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "margin-mobile": "16px",
+                "margin-desktop": "40px",
+                "container-max": "1280px",
+                "base": "8px",
+                "gutter": "24px"
+        },
+        "fontFamily": {
+                "label-md": [
+                        "Noto Sans KR"
+                ],
+                "headline-lg": [
+                        "Noto Sans KR"
+                ],
+                "headline-md": [
+                        "Noto Sans KR"
+                ],
+                "caption": [
+                        "Noto Sans KR"
+                ],
+                "body-lg": [
+                        "Noto Sans KR"
+                ],
+                "display-lg": [
+                        "Noto Sans KR"
+                ],
+                "label-sm": [
+                        "Noto Sans KR"
+                ],
+                "headline-lg-mobile": [
+                        "Noto Sans KR"
+                ],
+                "body-md": [
+                        "Noto Sans KR"
+                ]
+        },
+        "fontSize": {
+                "label-md": [
+                        "14px",
+                        {
+                                "lineHeight": "20px",
+                                "letterSpacing": "0.02em",
+                                "fontWeight": "500"
+                        }
+                ],
+                "headline-lg": [
+                        "32px",
+                        {
+                                "lineHeight": "40px",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "headline-md": [
+                        "24px",
+                        {
+                                "lineHeight": "32px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "caption": [
+                        "12px",
+                        {
+                                "lineHeight": "16px",
+                                "fontWeight": "100"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "display-lg": [
+                        "56px",
+                        {
+                                "lineHeight": "64px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "900"
+                        }
+                ],
+                "label-sm": [
+                        "12px",
+                        {
+                                "lineHeight": "16px",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "300"
+                        }
+                ],
+                "headline-lg-mobile": [
+                        "28px",
+                        {
+                                "lineHeight": "36px",
+                                "fontWeight": "700"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+        body {
+            background-color: #121411;
+            background-image: 
+                radial-gradient(circle at 50% 50%, rgba(167, 209, 166, 0.03) 0%, transparent 70%),
+                url("https://www.transparenttextures.com/patterns/dark-matter.png");
+            min-height: 100vh;
+            color: #e2e3de;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        .hanji-texture {
+            position: relative;
+        }
+        .hanji-texture::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: url("https://www.transparenttextures.com/patterns/handmade-paper.png");
+            opacity: 0.05;
+            pointer-events: none;
+            z-index: 1;
+        }
+        .sage-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin: 32px 0;
+        }
+        .sage-divider span {
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: #a7d1a6;
+            opacity: 0.6;
+        }
+        .glass-card {
+            background: rgba(30, 32, 29, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(167, 209, 166, 0.1);
+            border-top: 1px solid rgba(167, 209, 166, 0.3);
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            border-color: rgba(167, 209, 166, 0.4);
+            transform: translateY(-4px);
+        }
+        .gold-glow:hover {
+            box-shadow: 0 0 15px rgba(167, 209, 166, 0.2);
+        }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
 </head>
-<body class="bg-[#121411] text-[#e2e3de] font-sans">
-  <div id="app">
-    <!-- Consult a Master Layout Skeleton -->
-    <header class="p-4 border-b border-[#424941]">
-      <h1 class="text-xl font-bold">Saju Dosa</h1>
-    </header>
-    <main class="container mx-auto p-4">
-      <p>Loading Master List...</p>
-    </main>
-  </div>
-</body>
-</html>
+<body class="font-body-md text-body-md overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface/80 backdrop-blur-xl border-b border-outline-variant/20 flex items-center justify-between px-margin-mobile md:px-margin-desktop h-16 w-full">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="tempest">compost</span>
+<h1 class="font-headline-md text-headline-md text-primary tracking-widest uppercase">Saju Dosa</h1>
+</div>
+<nav class="hidden md:flex gap-8">
+<a class="font-label-md text-label-md text-primary hover:text-primary transition-colors tracking-widest" href="#">CONSULT</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors tracking-widest" href="#">COMMUNITY</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors tracking-widest" href="#">DESTINY</a>
+</nav>
+<button class="material-symbols-outlined text-on-surface-variant" data-icon="search">search</button>
+</header>
+<main class="pt-24 pb-32 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<!-- Hero Intro Section -->
+<section class="mb-16 text-center">
+<h2 class="font-display-lg text-display-lg text-primary mb-4 italic">Guided by Ancient Stars</h2>
+<p class="max-w-2xl mx-auto text-on-surface-variant/80 font-body-lg text-body-lg">
+                Connect with Korea's most revered Saju masters. Unlock the secrets of your birth chart and find clarity in career, love, and life path.
+            </p>
+<div class="sage-divider">
+<span></span><span></span><span></span>
+</div>
+</section>
+<!-- Masters Filter/Chips -->
+<section class="mb-12 flex flex-wrap justify-center gap-3">
+<button class="px-6 py-2 bg-primary text-on-primary font-label-md text-label-md rounded-none tracking-widest shadow-lg shadow-primary/10">ALL MASTERS</button>
+<button class="px-6 py-2 border border-outline-variant/30 text-on-surface-variant font-label-md text-label-md rounded-none hover:border-primary transition-all tracking-widest">CAREER &amp; WEALTH</button>
+<button class="px-6 py-2 border border-outline-variant/30 text-on-surface-variant font-label-md text-label-md rounded-none hover:border-primary transition-all tracking-widest">LOVE &amp; HARMONY</button>
+<button class="px-6 py-2 border border-outline-variant/30 text-on-surface-variant font-label-md text-label-md rounded-none hover:border-primary transition-all tracking-widest">NEW YEAR LUCK</button>
+</section>
+<!-- Saju Masters List (Asymmetric Bento Grid) -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-20">
+<!-- Master Card 1 -->
+<div class="md:col-span-8 glass-card hanji-texture rounded-xl p-8 flex flex-col md:flex-row gap-8 items-center md:items-stretch">
+<div class="relative w-48 h-48 md:w-64 md:h-full min-h-[250px] shrink-0 overflow-hidden rounded-lg">
+<img alt="Master Myeong-ja" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="A portrait of a dignified Korean elderly man with short grey hair, wearing a traditional dark navy silk hanbok. He is seated in a dimly lit, minimalist scholar's room with a soft glow from a paper lantern behind him. The atmosphere is serene, wise, and premium, with high-contrast shadows and gold-toned highlights reflecting the Saju Dosa brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzgW9gxorj0IFwOENpC8cse6csV46RqTeAXHQd7hrenwRP0qz78K4__75w855qL5aDQmAGH1gswm1tT6QfdJ-SIz69NMsGKgBQqsa3sr5vzPnaO4oOMwVhnqdhV2NBCnwrIcW0n6uWseYGPjGLNXAQSnoYhzSL99u-BtM4Uji9Pfdqw0t4eGZPIyW8QN9MDtRUdPWqOCE2RGMmLuJo8_WsXAtUoofjdeiCM-_9pD9DAWIEJUcm-QkZOM0__4USKT92Ulu6VccH52cQ"/>
+<div class="absolute top-4 left-4 bg-primary text-on-primary px-3 py-1 font-label-sm text-label-sm tracking-tighter">ELITE MASTER</div>
+</div>
+<div class="flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-headline-md text-primary">Master Myeong-ja</h3>
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md">4.9 (1.2k)</span>
+</div>
+</div>
+<p class="text-secondary font-label-sm text-label-sm mb-4 tracking-[0.2em] uppercase">Specialty: Global Career &amp; Wealth Strategy</p>
+<p class="text-on-surface-variant/80 font-body-md text-body-md mb-6 leading-relaxed italic">
+                            "The flow of capital is like the flow of water; it follows the path of least resistance in your elemental alignment."
+                        </p>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="px-2 py-1 bg-surface-container-high text-on-surface-variant text-label-sm font-label-sm rounded uppercase">WOOD</span>
+<span class="px-2 py-1 bg-surface-container-high text-on-surface-variant text-label-sm font-label-sm rounded uppercase">EARTH</span>
+</div>
+</div>
+<button class="w-full md:w-auto px-10 py-4 bg-primary text-on-primary font-label-md text-label-md rounded-none gold-glow transition-all tracking-widest">BOOK PRIVATE SESSION</button>
+</div>
+</div>
+<!-- Master Card 2 -->
+<div class="md:col-span-4 glass-card hanji-texture rounded-xl p-6 flex flex-col justify-between">
+<div>
+<div class="relative w-full aspect-square mb-6 overflow-hidden rounded-lg">
+<img alt="Sage Ji-hye" class="w-full h-full object-cover brightness-90 hover:brightness-100 transition-all duration-500" data-alt="A close-up portrait of a serene Korean woman in her 40s with elegant features, wearing a modern white hanbok-inspired blouse. She is standing against a textured charcoal wall with faint golden geometric celestial patterns. The lighting is soft and ethereal, emphasizing her calm and intuitive aura. The aesthetic is sophisticated, blending traditional and modern Korean styles." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjLSyrlTCFsfpN_dsFT7oaCmdUNuS_Js_Pj8eRP87NwtEAd4ROvQJE2PKx1uZla1TGXJ91z9S-yvAODebJw2W5xcef5voThk9AKButMbf_9mWduamBRzJfitbgFEsBk8Ei1VloS3-lheN_ekQETcyWZvRzOHaF8QXnifTxBGhf3HkLASlg4VGDdXXFTf1CKySKW3o_wpL9VzbCMG41hxh9ysZhXa-uDmH1oZmDA39aGc0A8QCSOE1MSyGMH4YOa6dtokkNB6rc4HkM"/>
+</div>
+<div class="flex justify-between items-center mb-1">
+<h3 class="font-headline-md text-headline-md text-primary">Sage Ji-hye</h3>
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md">5.0</span>
+</div>
+</div>
+<p class="text-secondary font-label-sm text-label-sm mb-4 tracking-[0.2em] uppercase">Specialty: Relationship Harmony</p>
+<p class="text-on-surface-variant/70 font-body-md text-body-md line-clamp-3 mb-6">
+                        Expert in Gunghap (compatibility) and emotional resilience through the Five Elements.
+                    </p>
+</div>
+<button class="w-full py-3 border border-primary text-primary font-label-md text-label-md rounded-none hover:bg-primary/10 transition-all tracking-widest">CHECK AVAILABILITY</button>
+</div>
+<!-- Master Card 3 -->
+<div class="md:col-span-4 glass-card hanji-texture rounded-xl p-6 flex flex-col justify-between">
+<div>
+<div class="relative w-full aspect-square mb-6 overflow-hidden rounded-lg">
+<img alt="Seer Tae-ho" class="w-full h-full object-cover contrast-125 hover:contrast-100 transition-all" data-alt="A portrait of a young Korean male seer with sharp features and a modern aesthetic, wearing a minimal black robe. He is surrounded by a faint, artistic blur of old calligraphy scrolls. The lighting is dramatic and moody, using deep navy and aged gold tones to create a sense of mystery and contemporary mysticism. Minimalist and high-end photographic style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLkc2rYVQgKQ3Eh2PAESdjI9xsGzSnJmXvuoy1sN0reHpaoiEVoGci0jx_gximIvy-GVXFBh1GCeGe9Qojvjggdn9mGiqqdMQNQfQmHbmySoXqhCSUjW-jfyNIhJdCsjdkYAUFYRiaC43J7sbosuRoeBEF5or3CDnTs0R_cVQC6tclNRUFq9O-RiYAic-T25U5lTon_magCeHuaToAeSwS7jxmmq0zxj1sFlLwVnvJAVHL2DBYsFBipM0Wjnqe6dkBk6yQAEDduNjM"/>
+</div>
+<div class="flex justify-between items-center mb-1">
+<h3 class="font-headline-md text-headline-md text-primary">Seer Tae-ho</h3>
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md">4.8</span>
+</div>
+</div>
+<p class="text-secondary font-label-sm text-label-sm mb-4 tracking-[0.2em] uppercase">Specialty: Strategic Timing</p>
+<p class="text-on-surface-variant/70 font-body-md text-body-md line-clamp-3 mb-6">
+                        Finding the perfect date for major life events—weddings, business launches, and moves.
+                    </p>
+</div>
+<button class="w-full py-3 border border-primary text-primary font-label-md text-label-md rounded-none hover:bg-primary/10 transition-all tracking-widest">RESERVE TIME</button>
+</div>
+<!-- Master Card 4 -->
+<div class="md:col-span-8 glass-card hanji-texture rounded-xl overflow-hidden flex flex-col md:flex-row">
+<div class="md:w-1/2 p-8 flex flex-col justify-center">
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Elder Shin-don</h3>
+<p class="text-secondary font-label-sm text-label-sm mb-4 tracking-[0.2em] uppercase">The Grand Patriarch of Saju</p>
+<p class="text-on-surface-variant/80 font-body-md text-body-md mb-8 leading-relaxed">
+                        With over 50 years of experience in mountain temples, Elder Shin-don provides the most profound life-path readings available in the modern world.
+                    </p>
+<div class="flex items-center gap-6">
+<div class="text-center">
+<p class="text-primary font-headline-md text-headline-md">15k+</p>
+<p class="text-label-sm font-label-sm text-on-surface-variant/50">READINGS</p>
+</div>
+<div class="w-px h-8 bg-outline-variant/30"></div>
+<div class="text-center">
+<p class="text-primary font-headline-md text-headline-md">50yr</p>
+<p class="text-label-sm font-label-sm text-on-surface-variant/50">EXPERIENCE</p>
+</div>
+</div>
+<button class="mt-8 px-8 py-4 bg-primary text-on-primary font-label-md text-label-md rounded-none gold-glow transition-all tracking-widest self-start">BOOK ELDER SESSION</button>
+</div>
+<div class="md:w-1/2 relative h-64 md:h-auto">
+<img alt="Mountain Temple" class="w-full h-full object-cover" data-alt="An atmospheric, cinematic shot of a traditional Korean mountain temple shrouded in morning mist. Aged wood structures, intricate colorful dancheong paint patterns, and a serene landscape of pine trees and granite peaks. The lighting is cool, blue-hour light with a hint of gold from a distant candle. Evokes a sense of deep spiritual history and the roots of Saju philosophy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB96TgpO4qKcDMoo3jq4cOTxLkKMjzoTj2lrLGsYbW8L1wmCuGUwIsFzupkO1TPHv5f8Jq9am9tkmJ9hRqBb7uEtNVBOj_6fRZWVZwgeuOv9DX7zwuhP8lBzvwOKARRplu2BxQgOLtptiLdcKIbFTBmCNUWfyAy2---PWOOLYjvlTEEUyUjyPfYTPbqGcjylqcRRWPoVmqt2Xf1PdigQdWK-z63wUAI72TcDDdCCY5qx6kSoBukcZSVMWN0g9hXq7MWEEJUx0r0CNd3"/>
+</div>
+</div>
+</section>
+<!-- Sage Wisdom Section (Featured Articles) -->
+<section class="mt-32">
+<div class="flex items-end justify-between mb-12">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary mb-2 italic">Sage Wisdom</h2>
+<p class="text-on-surface-variant/60 font-label-sm text-label-sm tracking-wide uppercase">Insights into Korean Mysticism</p>
+</div>
+<a class="font-label-md text-label-md text-primary border-b border-primary pb-1 hover:opacity-70 transition-opacity" href="#">READ ALL ARTICLES</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+<!-- Article 1 -->
+<article class="group cursor-pointer">
+<div class="relative overflow-hidden mb-6 aspect-[4/5] rounded-lg">
+<img alt="Five Elements" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Artistic abstract representation of the Five Elements: Wood, Fire, Earth, Metal, and Water. The image features flowing textures, brushed ink strokes in deep black, and glowing highlights of desaturated elemental colors. The style is minimalist and textural, appearing like an ancient mulberry paper scroll with modern digital clarity. Sophisticated and high-end aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7FxcgnyFOtUHcue0Yk9UQWuUJJcnzlX7HVj46aDuYblKICrx8UV5lNsN2uon8cXMq40TORkE63C1tJgnpDN_anPE4wt1EmnDTz4M0MdOe3FGwfCS2lfZG949EMgqn514t1s3nGgB314U_94OySiBc0UNFU7NtAm7i9zkbOW17KTiWZpEiCtbcY4ybuNPloyMObDFHDd96RYc78RcUi06hFimghaLcxyk7oI-kLN-hplgLSplRqKOhuKHBk5EkFI7n592wnOL0xS_w"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent opacity-60"></div>
+<div class="absolute bottom-6 left-6">
+<span class="px-3 py-1 bg-primary/20 backdrop-blur-md text-primary font-label-sm text-label-sm tracking-widest border border-primary/20">PHILOSOPHY</span>
+</div>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3 group-hover:text-primary transition-colors">Decoding the Five Elements in Your Daily Routine</h3>
+<p class="text-on-surface-variant/70 font-body-md text-body-md line-clamp-2">Learn how to balance your inner energy by aligning your environment with your dominant Saju element.</p>
+</article>
+<!-- Article 2 -->
+<article class="group cursor-pointer">
+<div class="relative overflow-hidden mb-6 aspect-[4/5] rounded-lg">
+<img alt="Moonlight Consultation" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A beautiful, high-fidelity top-down shot of a traditional scholar's desk (Sarangbang). On the desk is a calligraphy brush, a small ink stone, and an ancient Saju chart on aged mulberry paper. A single ray of moonlight illuminates the scene, casting soft, elegant shadows. The mood is quiet, focused, and deeply mysterious, embodying the beauty of emptiness (Yeobaek-ui-mi)." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA72jlrDEDv0v5MO9L5-upyEYevOIcPCHZMEGMIUOXFDvelMM_Mbu3wG9YFBeRK_-fAhd-H6i1NgVZGZKhoajwaMahtrS-nA_WEuIsQ7_rxJe53BddsVQA9vNGzeuw-gfXHxVPbz117keBYyu5-4W0RLFlV9DpTBkOipU05xfKnilVbDaz1T_1T9Wbk4UYj8xRr42kSEL9JPFnGBSc4n_9wrbi46w3nIUuP2KZj_Ne-vufoKiiStZ33sGpHSUxJ5JPFEsdcNExfgHfr"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent opacity-60"></div>
+<div class="absolute bottom-6 left-6">
+<span class="px-3 py-1 bg-primary/20 backdrop-blur-md text-primary font-label-sm text-label-sm tracking-widest border border-primary/20">PRACTICE</span>
+</div>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3 group-hover:text-primary transition-colors">The Art of the Silent Consultation</h3>
+<p class="text-on-surface-variant/70 font-body-md text-body-md line-clamp-2">Why the most profound insights are often found in the silence between a Master's words.</p>
+</article>
+<!-- Article 3 -->
+<article class="group cursor-pointer">
+<div class="relative overflow-hidden mb-6 aspect-[4/5] rounded-lg">
+<img alt="Gureum Pattern" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="An elegant, macro photograph of a traditional Korean 'Gureum' (cloud) pattern embroidered with gold thread onto a deep charcoal silk fabric. The focus is sharp on the intricate textures of the thread, with a shallow depth of field creating a luxurious bokeh. The lighting is warm and directional, emphasizing the tactile quality of the silk and gold." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeTh1JKagNpNsK6sssX9sofXloR4W8Nh5ZES6c5r0w9ymn5VK-ehwfthw3tk7tNEuspfuZyqxkB_dJm--tv3TkoGQoNY1PEP0UfwwCc2HuqrfbN6yuqOD0sbWmuJQ0-_6gsLY0czAT5xpnaIoOkOgdULhjNRWSDeJuPSiP4qi873XnTM0Lpwre_4azt-dUlJFyANBF98t4yjcqRHnruUK0qdW4HJQabOAH5uLYnbof2mWdy6MNqp8a1DlDLHyyx5R75CvtfeUViOHD"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent opacity-60"></div>
+<div class="absolute bottom-6 left-6">
+<span class="px-3 py-1 bg-primary/20 backdrop-blur-md text-primary font-label-sm text-label-sm tracking-widest border border-primary/20">SYMBOLS</span>
+</div>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3 group-hover:text-primary transition-colors">Visual Omens: Traditional Patterns</h3>
+<p class="text-on-surface-variant/70 font-body-md text-body-md line-clamp-2">Every curve of a cloud and brushstroke of a mountain carries meaning in the seeker's journey.</p>
+</article>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 bg-surface-container-highest/90 backdrop-blur-md border-t border-outline-variant/10 shadow-lg flex justify-around items-center h-20 px-2 pb-safe w-full rounded-t-xl">
+<a class="flex flex-col items-center justify-center text-on-surface-variant/70 hover:text-primary transition-all group" href="#">
+<span class="material-symbols-outlined text-2xl group-active:scale-90 transition-transform" data-icon="home_mini">home_mini</span>
+<span class="font-label-sm text-label-sm mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant/70 hover:text-primary transition-all group" href="#">
+<span class="material-symbols-outlined text-2xl group-active:scale-90 transition-transform" data-icon="auto_awesome">auto_awesome</span>
+<span class="font-label-sm text-label-sm mt-1">Readings</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary bg-primary/10 rounded-xl px-4 py-1 transition-all" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="groups">groups</span>
+<span class="font-label-sm text-label-sm mt-1">Consult</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant/70 hover:text-primary transition-all group" href="#">
+<span class="material-symbols-outlined text-2xl group-active:scale-90 transition-transform" data-icon="person">person</span>
+<span class="font-label-sm text-label-sm mt-1">Profile</span>
+</a>
+</nav>
+<!-- Background Decoration -->
+<div class="fixed top-0 right-0 -z-10 w-1/3 h-1/2 opacity-10 pointer-events-none rotate-12 translate-x-20 -translate-y-20">
+<img alt="Cloud Pattern Watermark" class="w-full h-full object-contain" data-alt="A delicate, repeating watermark pattern of traditional Korean clouds (Gureum) in a faint, desaturated gold color. The pattern is thin and elegant, resembling a watermark on high-quality handmade paper. It is set against a very dark, near-black background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcZ6aIzeWosZC82M23Dtfksz4v3aZMRV16dIWoTQpMce4zDgSlGNKXvI4rRbrbVfqYfBUg8zs9uthpeESbhnw8TYqj24PpQ1B7AmivsxZCWss_treFYX1SlO3wk-dZQ3jmpukxmUZpUszIFtOqUU6ky7qfV9qSFK4U70KUvlfE6DhrQnMTmoO0R-ZO0-he7EHikB6vuSL8u9cRjzz8zOEpWDq1caFHoqA7oEINTj92uFlkUGa0GTzfNnKoA2w9r4cKPeqLPe9zNlD2"/>
+</div>
+<script>
+        // Micro-interactions for buttons
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('mousedown', () => {
+                button.classList.add('scale-95');
+            });
+            button.addEventListener('mouseup', () => {
+                button.classList.remove('scale-95');
+            });
+            button.addEventListener('mouseleave', () => {
+                button.classList.remove('scale-95');
+            });
+        });
+
+        // Simple scroll reveal effect for cards
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.glass-card, article').forEach(el => {
+            el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+    </script>
+</body></html>
